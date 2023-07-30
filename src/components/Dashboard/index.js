@@ -4,11 +4,6 @@ import CreditDebit from '../CreditDebit'
 
 import './index.css'
 
-const AllPages = [
-  {id: 'Dashboard', page: 'Dashboard'},
-  {id: 'All Transactions', page: 'All Transactions'},
-  {id: 'Profile', page: 'Profile'},
-]
 class AdminPage extends Component {
   state = {totalTransactions: [], debit: 0, credit: 0}
 
@@ -65,9 +60,7 @@ class AdminPage extends Component {
   }
 
   render() {
-    const {debit, credit, isTrue, totalTransactions} = this.state
-
-    
+    const {debit, credit, totalTransactions} = this.state
 
     return (
       <div className="bg-container">
