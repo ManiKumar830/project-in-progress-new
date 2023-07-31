@@ -5,7 +5,7 @@
   display: flex;
 }
 
-.Transaction-Header-container {
+.Transaction-Header-container-dash {
   display: flex;
   width: 100%;
   padding: 24px 40px;
@@ -73,7 +73,7 @@
 }
 .credit-debit-container {
   display: flex;
-  width: 47%;
+  width: 49%;
   height: 200px;
   padding: 25px 36px;
   justify-content: space-between;
@@ -113,7 +113,7 @@
 
 .debit-container {
   display: flex;
-  width: 47%;
+  width: 49%;
   height: 200px;
   padding: 25px 36px;
   justify-content: space-between;
@@ -179,8 +179,8 @@
 }
 .last-three-container {
   display: flex;
-  width: 90%;
-  height: 290px;
+  width: 100%;
+  height: 340px;
   padding: 24px 30px 28px 30px;
   flex-direction: column;
   align-items: flex-start;

@@ -48,59 +48,7 @@
   align-self: center;
   margin-right: 15px;
 }
-.dashboard-text {
-  color: #505887;
 
-  /* Heading three medium 18p */
-  font-family: 'Roboto';
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.dashboard-blue-text {
-  color: #2d60ff;
-
-  /* Heading three medium 18p */
-  font-family: 'Roboto';
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.allTrans-text {
-  color: #505887;
-
-  /* Heading three medium 18p */
-  font-family: 'Roboto';
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.allTrans-blue-text {
-  color: #2d60ff;
-
-  /* Heading three medium 18p */
-  font-family: 'Roboto';
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.dashboard-container {
-  display: flex;
-  margin-top: 50px;
-  margin-left: 15px;
-  background-color: transparent;
-  border: none;
-}
-.all-transactions-container {
-  display: flex;
-  margin-left: 15px;
-  background-color: transparent;
-  border: none;
-}
 .profile-container {
   display: flex;
   margin-left: 15px;
@@ -126,6 +74,9 @@
   align-items: flex-end;
 
   border-top: 1px solid #eaecf0;
+}
+.ul-list {
+  padding-left: 0px;
 }
 .user-name {
   color: #505887;

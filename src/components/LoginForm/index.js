@@ -34,30 +34,30 @@ class LoginForm extends Component {
 
     const {email, password} = this.state
 
+    const url = `https://bursting-gelding-24.hasura.app/api/rest/get-user-id?email=${email}&password=${password}`
+
+    const options = {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        'x-hasura-admin-secret':
+          'g08A3qQy00y8yFDq3y6N1ZQnhOPOa4msdie5EtKS1hFStar01JzPKrtKEzYY2BtF',
+      },
+    }
+
+    const response = await fetch(url, options)
+    const jsonData = await response.json()
+    console.log(jsonData)
+
+    const loginId = jsonData.get_user_id[0].id
+
     // Check if the response contains the user_id property
 
-    // For simplicity, we are considering Admin's password to be static
-    if (email === 'admin@gmail.com' && password === 'Admin@123') {
+    if (loginId === 3) {
       // Redirect to Admin Dashboard
-      history.push('/dashboard')
-    } else if (email === 'jane.doe@gmail.com' && password === 'janedoe@123') {
-      history.push('/user/1')
-    } else if (email === 'samsmith@gmail.com' && password === 'samsmith@123') {
-      history.push('/user/2')
-    } else if (email === 'rahul@gmail.com' && password === 'rahul@123') {
-      history.push('/user/4')
-    } else if (email === 'teja@gmail.com' && password === 'teja@123') {
-      history.push('/user/5')
-    } else if (email === 'loki@gmail.com' && password === 'loki@123') {
-      history.push('/user/6')
-    } else if (email === 'ramesh@gmail.com' && password === 'ramesh@123') {
-      history.push('/user/7')
-    } else if (email === 'suresh@gmail.com' && password === 'suresh@123') {
-      history.push('/user/8')
-    } else if (email === 'prem@gmail.com' && password === 'prem@123') {
-      history.push('/user/9')
-    } else if (email === 'piyush@gmail.com' && password === 'piyush@123') {
-      history.push('/user/10')
+      history.push('/admin/dashboard')
+    } else if (Number.isInteger(loginId)) {
+      history.push(`/user/${loginId}`)
     } else {
       console.log('error')
     }
